@@ -9,7 +9,10 @@ proc nested(ctx: Context) {.async.} =
     resp "This page is really \"nested\""
 
 proc selectByParam(ctx: Context) {.async.} =
-    resp "This page accessed by URL param: " & ctx.getPathParams("param", "defaulValue")
+    resp "This page accessed by URL param: " & ctx.getPathParams("param")
+
+proc selectByDefaultParam(ctx: Context) {.async.} =
+    resp "This page accessed by URL non-existing param - using default one: " & ctx.getPathParams("non_exsiting_param", "defaultParam")
 
 
 # Create new (default) settings for Prologue
