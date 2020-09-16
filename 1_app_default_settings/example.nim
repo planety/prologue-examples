@@ -12,7 +12,7 @@ let settings = newSettings()
 # Create Prologue instance
 var app = newApp(settings = settings)
 
-# Define a new route with handler name
+# Add a new route with handler name
 app.addRoute("/ping", pong)
 
 # Run the instance

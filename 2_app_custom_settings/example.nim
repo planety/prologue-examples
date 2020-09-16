@@ -11,9 +11,7 @@ proc pong(ctx: Context) {.async.} =
 let settings = newSettings(
         address = "127.0.0.1",
         port = Port(8787),
-        debug = false,
-        reusePort = true,
-        staticDirs = [""],
+        debug = true,
         appName = "Prologue Example"
     )
 
