@@ -12,7 +12,6 @@ proc selectByParam(ctx: Context) {.async.} =
     resp "This page accessed by URL param: " & ctx.getPathParams("param", "defaulValue")
 
 
-
 # Create new (default) settings for Prologue
 let settings = newSettings()
 
