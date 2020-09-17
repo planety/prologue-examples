@@ -7,7 +7,6 @@ proc echoMethod(ctx: Context) {.async.} =
     resp "Hey! The selected method is : " & $ctx.request.reqMethod
 
 
-
 # Create new (default) settings for Prologue
 let settings = newSettings()
 
