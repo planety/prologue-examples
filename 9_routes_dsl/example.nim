@@ -2,18 +2,18 @@ import std/with
 import prologue
 
 
-# This is a handler that is being called by all routes below
+# The handler that is called by the routes below
 proc echoMethod(ctx: Context) {.async.} =
     resp "Hey! The selected method is : " & $ctx.request.reqMethod
 
 
-# Create new (default) settings for Prologue
+# Create new (default) settings
 let settings = newSettings()
 
-# Create Prologue instance
+# Create instance
 var app = newApp(settings = settings)
 
-# Create routes using DSL (domain specific language)
+# Attach routes using DSL (domain specific language)
 # You can read about more: https://nim-lang.github.io/Nim/with.html
 with app:
     get "/", echoMethod
@@ -21,5 +21,5 @@ with app:
     patch "/", echoMethod
     delete "/", echoMethod
 
-# Run the instance
+# Run instance
 app.run()

@@ -1,12 +1,12 @@
 import prologue
 
 
-# This is a handler that is being called by the route below
+# The handler that is called by the route below
 proc pong(ctx: Context) {.async.} =
   resp "pong"
 
 
-# Create new custom settings for Prologue
+# Create new custom settings
 # More on that: https://planety.github.io/prologue/coreapi/prologue/core/nativesettings.html#Settings
 let settings = newSettings(
         address = "127.0.0.1",
@@ -15,11 +15,11 @@ let settings = newSettings(
         appName = "Prologue Example"
     )
 
-# Create Prologue instance
+# Create instance
 var app = newApp(settings = settings)
 
-# Define a new route with handler name
+# Attach new route with handler name
 app.addRoute("/ping", pong)
 
-# Run the instance
+# Run instance
 app.run()

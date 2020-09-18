@@ -1,7 +1,7 @@
 import prologue
 
 
-# There are handlers that are being called by corresponding routes below
+# Handlers that are called by the routes below
 proc selectByParam(ctx: Context) {.async.} =
     resp "This page accessed by URL param: " & ctx.getPathParams("param")
 
@@ -12,17 +12,16 @@ proc selectMultipleParams(ctx: Context) {.async.} =
     resp "This page accessed by multiple URL params: " & ctx.getPathParams("param_1", "default value 1") & " and " & ctx.getPathParams("param_2", "default value 2")
 
 
-# Create new (default) settings for Prologue
+# Create new (default) settings
 let settings = newSettings()
 
-# Create Prologue instance
+# Create instance
 var app = newApp(settings = settings)
 
-# Add different routes
-# Note that we treat routes as `GET` by default.
+# Attach different routes
 app.addRoute("/select/{param}", selectByParam)
 app.addRoute("/select-wrong/{param}", selectByDefaultParam)
 app.addRoute("/select-multiple/{param_1}/{param_2}", selectMultipleParams)
 
-# Run the instance
+# Run instance
 app.run()
