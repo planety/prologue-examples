@@ -18,7 +18,7 @@ let settings = newSettings()
 # Note that we (globaly) attach middleware to our instanse
 var app = newApp(settings = settings, middlewares = @[minimalMiddleware()])
 
-# Attach a routes (with handler inlined)
+# Attach route with handler inlined
 app.addRoute("/", proc(ctx: Context) {.async.} = resp "Check the terminal output for middleware echoes")
 
 # Run instance
