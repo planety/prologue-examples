@@ -1,1 +1,0 @@
-# Middleware minimal example

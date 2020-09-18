@@ -1,8 +1,8 @@
 import prologue
 
 
-# The middleware with bare minimum
-proc minimalMiddleware*(): HandlerAsync =
+# The most basic middleware
+proc echoMiddleware*(): HandlerAsync =
     result = proc(ctx: Context) {.async.} =
         echo "(from middleware) Before"
         # do something before
@@ -14,9 +14,8 @@ proc minimalMiddleware*(): HandlerAsync =
 # Create new (default) settings
 let settings = newSettings()
 
-# Create instance with middleware
-# Note that we (globaly) attach middleware to our instanse
-var app = newApp(settings = settings, middlewares = @[minimalMiddleware()])
+# Create instance with middleware attached globaly
+var app = newApp(settings = settings, middlewares = @[echoMiddleware()])
 
 # Attach route with handler inlined
 app.addRoute("/", proc(ctx: Context) {.async.} = resp "Check the terminal output for middleware echoes")
