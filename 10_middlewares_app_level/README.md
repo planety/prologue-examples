@@ -1,1 +1,1 @@
-# Attach middleware to app level (global)
+# Attach middleware to app level (globaly)

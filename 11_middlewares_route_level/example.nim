@@ -20,9 +20,9 @@ proc pong(ctx: Context) {.async.} =
 let settings = newSettings()
 
 # Create instance
-var app = newApp(settings = settings, )
+var app = newApp(settings = settings)
 
-# Attach route with local middleware
+# Attach route with middleware
 app.addRoute("/", pong, middlewares = @[echoMiddleware()])
 
 # Run instance
