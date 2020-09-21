@@ -13,7 +13,7 @@ proc echoMiddleware*(): HandlerAsync =
 
 # The handler that is called by the route below
 proc pong(ctx: Context) {.async.} =
-  resp "pong"
+    resp "pong"
 
 
 # Create new (default) settings
