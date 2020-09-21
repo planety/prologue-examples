@@ -1,7 +1,7 @@
 import prologue
 
 
-# The handler that is called by the route below
+# Handler that is called by the route below
 proc pong(ctx: Context) {.async.} =
   resp "pong"
 

@@ -8,6 +8,7 @@ let settings = newSettings()
 var app = newApp(settings = settings)
 
 # Attach new route with handler name
+# Note that we use 'inlined' handlers for simplicity
 app.addRoute("/", proc(ctx: Context) {.async.} =
     resp "This is a response"
 )

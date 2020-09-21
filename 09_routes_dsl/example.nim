@@ -2,7 +2,7 @@ import std/with
 import prologue
 
 
-# The handler that is called by the routes below
+# Handler that is called by the routes below
 proc echoMethod(ctx: Context) {.async.} =
     resp "Hey! The selected method is : " & $ctx.request.reqMethod
 

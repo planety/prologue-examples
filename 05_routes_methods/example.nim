@@ -1,7 +1,7 @@
 import prologue
 
 
-# The handler that is called by all routes below
+# Handler that is called by all routes below
 proc echoMethod(ctx: Context) {.async.} =
     resp "Hey! The selected method is : " & $ctx.request.reqMethod
 
