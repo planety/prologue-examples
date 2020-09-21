@@ -4,17 +4,17 @@ import prologue
 # Three middlewares to play around
 proc middlewareA*(): HandlerAsync =
     result = proc(ctx: Context) {.async.} =
-        echo "He it's an 'A'"
+        echo "It's an 'A'"
         await switch(ctx)
 
 proc middlewareB*(): HandlerAsync =
     result = proc(ctx: Context) {.async.} =
-        echo "He it's a 'B'"
+        echo "It's a 'B'"
         await switch(ctx)
 
 proc middlewareC*(): HandlerAsync =
     result = proc(ctx: Context) {.async.} =
-        echo "He it's a 'C'"
+        echo "It's a 'C'"
         await switch(ctx)
 
 
