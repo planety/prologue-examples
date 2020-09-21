@@ -18,12 +18,10 @@ let settings = newSettings()
 # Create instance
 var app = newApp(settings = settings)
 
-# Attach route with middleware
-# Note that we need to call the CSRF Middleware for both routes:
-#    - for rendering form to generate cookie
-#    - for proccesing form to verify CSRF token
+# Attach route with CORS middleware and various settings
 app.addRoute("/", exampleHandler)
 app.addRoute("/test-cors", exampleHandler, middlewares = @[CorsMiddleware(allowOrigins = @["null"], allowMethods = @["put"])])
 app.addRoute("/test-cors-3", exampleHandler, middlewares = @[CorsMiddleware(allowOrigins = @["null"], allowHeaders = @["Custom-Header"])])
+
 # Run instance
 app.run()
