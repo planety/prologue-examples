@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test CORS Middleware</title>
+        <link rel="stylesheet" href="static/main.css">
+        <link rel="stylesheet" href="static/layout.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main class="content">
+            <p><strong>Be sure to run example first with default settings (127.0.0.1:8080)</strong></p>
+            <div id="response" class="alert wait">Checking if example is running...</div>
+            <label>Select route:</label>
+            <select name="select" disabled>
+                <option selected>/test-null-origin</option>
+                <option >/test-custom-header</option>
+                <option >/test-post-method</option>
+            </select>
+            <div class="footer">
+                <button type="button" disabled>Check for CORS headers</button>
+                <div class="checkbox">
+                    <input type="radio" value="get" id="get" name="method" checked><label for="get">GET</label>
+                    <input type="radio" value="post" id="post" name="method"><label for="post">POST</label>
+                    <input type="radio" value="put" id="put" name="method"><label for="put">PUT</label>
+                    <input type="radio" value="delete" id="delete" name="method"><label for="delete">DELETE</label>
+                <div>
+            </div>
+        </main>
+    </body>
+</html>
+
+<script>
+    // On load events
+    // Check if backend example is running
+    fetch('http://127.0.0.1:8080/ping', {
+        method: 'GET',
+        mode: 'no-cors',
+        cache: 'no-cache',
+    })
+    .then((response) => {
+        return response;
+    })
+    .then((data) => {
+        $("#response").removeClass("danger").addClass("success").html("Example is running");
+        $("select").prop('disabled', false);
+        $("button").prop('disabled', false);
+    })
+    .catch(err => {
+        $("#response").removeClass("success").addClass("danger").html("Example is not running. Run it first and refresh the page");
+    });
+
+    // Button events
+    $("button").click(function() {
+
+        let method = $("input:radio[name ='method']:checked").val();
+
+        fetch('http://127.0.0.1:8080' + $( "select option:selected" ).text(), {
+            method: method,
+            mode: 'cors',
+            cache: 'no-cache',
+        })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            $("#response").removeClass("danger").addClass("success").html("Got response: <code>" + data + "</code>");
+        })
+        .catch(err => {
+           console.log('caught it!',err);
+           $("#response").removeClass("success").addClass("danger").html(err);
+        });
+    });
+</script>
