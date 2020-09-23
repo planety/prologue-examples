@@ -1,1 +1,1 @@
-# Set headers example
+# Response headers

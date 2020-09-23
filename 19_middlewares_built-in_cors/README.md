@@ -1,2 +1,2 @@
-# Built-in CORS
+# Built-in: CORS examples
 WIP

@@ -1,4 +1,4 @@
-# Routes with regex
+# Regex in URL
 
 https://github.com/nitely/nim-regex
 

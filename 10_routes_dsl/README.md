@@ -1,3 +1,3 @@
-# Routes created using Domain Specific Language
+# Create routes with Domaing Specific Language
 
 Need more use cases for this feature.

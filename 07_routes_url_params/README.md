@@ -1,1 +1,1 @@
-# Simple routes example
+# Passing and reading URL parameters

@@ -1,2 +1,2 @@
-# Responses examples
+# Response types
 WIP

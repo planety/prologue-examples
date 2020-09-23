@@ -4,31 +4,31 @@ A repository to host examples for Prologue framework.
 ⚠️ These examples are under development and may change in the future.
 
 ## App
-- Starting app with default settings
-- Starting app with custom settings
-- Static directories
+- Start app with default settings
+- Start app with custom settings
+- Start app with static dir
 
 ## Routes
-- Basic structure
-- Routing with inline handlers
+- Simple routes example
+- Routes with 'anonymous' handlers
 - Requests methods (GET, POST, PUT, DELETE)
 - Passing and reading URL parameters
 - Passing and reading query parameters
 - Regex in URL
-- Use Domaing Specific Language
+- Create routes with Domaing Specific Language
 - Grouping(nesting?) routes
 
 ## Responses
-- Different types
-- Working with headers
-- Karax Template Engine
+- Response types
+- Response headers
+- HTML Response using Karax DSL
 
 ## Middlewares
-- On application level
-- On routing level
+- Attach middleware to app level (globaly)
+- Attach middleware to route level (localy)
 - Multiple middlewares
-- Built-in: CSRF
-- Built-in: CORS
+- Built-in: CSRF examples
+- Built-in: CORS examples
 
 ## Cookies
-- Simple example
+- Simple cookie example

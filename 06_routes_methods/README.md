@@ -1,1 +1,1 @@
-# Routes and various methods
+# Requests methods (GET, POST, PUT, DELETE)

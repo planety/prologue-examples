@@ -1,1 +1,1 @@
-# Reading query parameters in URL
+# Passing and reading query parameters

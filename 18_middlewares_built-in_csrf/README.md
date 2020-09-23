@@ -1,3 +1,3 @@
-# Built-in CSRF (cross-site request forgery) middleware examples
+# Built-in: CSRF examples
 
 Need to create examples for SPA, ajax and etc.
