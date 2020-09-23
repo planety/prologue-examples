@@ -27,7 +27,7 @@ app.addRoute("/ping", pong, middlewares = @[CorsMiddleware(allowOrigins = @["nul
 # Attach route with CORS middleware and various settings
 app.addRoute("/test-null-origin", exampleHandler, middlewares = @[CorsMiddleware(allowOrigins = @["null"])])
 app.addRoute("/test-custom-header", exampleHandler, middlewares = @[CorsMiddleware(allowOrigins = @["null"], allowHeaders = @["Custom-Header"])])
-app.addRoute("/test-post-method", exampleHandler, middlewares = @[CorsMiddleware(allowOrigins = @["null"], allowMethods = @["post"])])
+app.addRoute("/test-post-method", exampleHandler, @[HttpGet, HttpPost], middlewares = @[CorsMiddleware(allowOrigins = @["null"], allowMethods = @["post"])])
 
 # Run instance
 app.run()
