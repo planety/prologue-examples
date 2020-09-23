@@ -4,8 +4,9 @@ A repository to host examples for Prologue framework.
 ⚠️ These examples are under development and may change in the future.
 
 ## App
-- Starting app with default settings
-- Starting app with custom settings
+- (01_app_default_settings)[https://github.com/planety/prologue-examples/tree/master/01_app_default_settings] Starting app with default settings
+- (02_app_custom_settings)[https://github.com/planety/prologue-examples/tree/master/02_app_custom_settings] Starting app with custom settings
+- (03_app_static_dir)[https://github.com/planety/prologue-examples/tree/master/03_app_static_dir] Static directory
 
 ## Routes
 - Basic structure
