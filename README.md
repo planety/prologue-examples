@@ -29,6 +29,7 @@ A repository to host examples for Prologue framework.
 - Multiple middlewares
 - Built-in: CSRF examples
 - Built-in: CORS examples
+- Built-in: sessions examples
 
 ## Cookies
 - Simple cookie example
