@@ -6,6 +6,7 @@ A repository to host examples for Prologue framework.
 ## App
 - Start app with default settings
 - Start app with custom settings
+- Start app with .env settings
 - Start app with static dir
 
 ## Routes
