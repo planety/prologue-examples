@@ -35,16 +35,16 @@ Some examples might have different port number for sake of demostration.
 - HTML Response using Karax DSL: [responses_karax](responses_examples/responses_karax)
 
 ## Middleware examples
-- Attach middleware to app level (globaly)
-- Attach middleware to route level (localy)
-- Multiple middlewares
-- Built-in: CSRF examples
-- Built-in: CORS examples
-- Built-in: sessions examples
+- Middleware to app level (globaly): [middlewares_app_level](middlewares_examples/middlewares_app_level)
+- Middleware to route level (localy): [middlewares_route_level](middlewares_examples/middlewares_route_level)
+- Multiple middlewares: [middlewares_multiple](middlewares_examples/middlewares_multiple)
+- Built-in: CSRF examples: [middlewares_csrf](middlewares_examples/middlewares_csrf)
+- Built-in: CORS examples: [middlewares_cors](middlewares_examples/middlewares_cors)
+- Built-in: sessions examples: [middlewares_session](middlewares_examples/middlewares_session)
 
 ## Cookie examples
-- Simple cookie example
+- Simple cookie example: [cookies_simple](cookies_examples/cookies_simple)
 
 ## Sample Apps
-- Hello world
-- Blog app
+- Hello world: [helloworld](sample_apps_examples/helloworld)
+- Blog app: [blog](sample_apps_examples/blog)
