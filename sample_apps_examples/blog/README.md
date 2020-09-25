@@ -7,6 +7,9 @@ The purpose of this 'Blog' example is to cover following basic actions:
 - Edit or delete particular record
 - Create new record.
 
+## Screenshot
+![screenshot](screenshot/screenshot.jpg)
+
 ## Compile and run project
 Simply call `nim compile --run app.nim` in blog root directory and access 127.0.0.1:8787 URL in your browser.
 
@@ -24,10 +27,6 @@ schema.sql
 urls.nim
 views.nim
 ```
-
-### Screenshot
-
-![screenshot](screenshot/screenshot.jpg)
 
 ####  Static folder
 Every public assets are stored in this folder.
