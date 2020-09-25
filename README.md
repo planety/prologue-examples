@@ -13,11 +13,11 @@ You can install Prologue via Nimble: `nimble install prologue`
 Simply call `nim compile --run example.nim` inside of particular example directory and access 127.0.0.1:8080 URL in your browser.
 Some examples might have different port number for sake of demostration.
 
-[## App](app_examples)
-- Start app with default settings
-- Start app with custom settings
-- Start app with .env settings
-- Start app with static dir
+## App
+- Start app with default settings: [example](app_examples/app_default_settings)
+- Start app with custom settings: [example](app_examples/app_custom_settings)
+- Start app with .env settings: [example](app_examples/app_env_settings)
+- Start app with static dir: [example](app_examples/app_static_dir)
 
 ## Routes
 - Simple routes example
