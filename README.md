@@ -1,4 +1,4 @@
-# prologue-examples
+# Prologue framework examples repository
 A repository to host examples for [Prologue](https://github.com/planety/prologue) framework.
 
 ⚠️ These examples are under development and may change in the future.
