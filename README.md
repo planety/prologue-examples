@@ -45,7 +45,7 @@ Some examples might have different port number for sake of demostration.
 - cookies basic example: [cookies_basic](cookies_basic)
 
 ## Database
-- crud basic example: [crud](crud)
+- CRUD basic example: [crud](crud)
 
 ## Sample Apps
 - Hello world: [helloworld](helloworld)
