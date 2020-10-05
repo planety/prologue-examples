@@ -1,0 +1,27 @@
+{%import share/menu.html%}
+<html>
+	<head>
+		<title>{{title}}</title>
+	</head>
+
+	<body>
+		<div>
+			{{self.menu}} 
+
+		</div>
+
+		<h1>{{title}}</h1>
+
+		<div>
+			{%block "content"%}
+				{# i will be replaced by my children #}
+			{%endblock%}
+		</div>
+
+		<div>
+			<hr> 
+			Made with nim<br>
+			{{self.footer}}
+		</div>
+	</body>
+</html>
