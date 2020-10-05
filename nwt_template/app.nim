@@ -1,22 +1,34 @@
-import asyncdispatch
+import json
 import prologue
 import nwt
 
 
-# Create default settings and template engine
-let 
-    settings = newSettings()
-    templates = newNwt("views/*.html")
+# Create default settings
+let settings = newSettings()
+
+# Create template engine
+var templates {.threadvar.}: Nwt 
+templates = newNwt("views/*.html")
 
 # Create instance
 var app = newApp(settings = settings)
 
-# Route handler
-proc routeHandler(ctx: Context) {.async.} =
+# Create routes
+app.addRoute("/", proc(ctx: Context) {.async.} =
     resp htmlResponse(templates.renderTemplate("index.html"))
+)
 
-# Create route
-app.addRoute("/", routeHandler)
+app.addRoute("/about", proc(ctx: Context) {.async.} =
+    resp htmlResponse(templates.renderTemplate("about.html"))
+)
+
+app.addRoute("/stats", proc(ctx: Context) {.async.} =
+    var data = %* {
+        "title": "some variables from nim", 
+        "foo": "Foo!", "bar": "Bar!"
+    }
+    resp htmlResponse(templates.renderTemplate("stats.html", data))
+)
 
 # Run instance
 app.run()
