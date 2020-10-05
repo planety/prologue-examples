@@ -32,7 +32,8 @@ Some examples might have different port number for sake of demostration.
 ## Responses
 - response basic example: [response](response)
 - setting headers: [headers](headers)
-- templating with Karax DSL: [template](template)
+- templating with Karax DSL: [karax_template](karax_template)
+- templating with nimWebTemplates (NWT): [nwt_template](nwt_template)
 
 ## Middleware
 - middleware basic example: [middleware_basic](middleware_basic)
