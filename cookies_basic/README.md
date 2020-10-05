@@ -1,1 +1,1 @@
-# Simple cookie example
+# Basic auth middleware
