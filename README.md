@@ -40,6 +40,7 @@ Some examples might have different port number for sake of demostration.
 - CSRF: [csrf](csrf)
 - CORS: [cors](cors)
 - session with signed cookie: [signed_cookie_session](signed_cookie_session)
+- basic auth: [basic_auth](basic_auth)
 
 ## Cookies
 - cookies basic example: [cookies_basic](cookies_basic)
