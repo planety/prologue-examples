@@ -14,15 +14,15 @@ templates = newNwt("views/*.html")
 var app = newApp(settings = settings)
 
 # Create routes
-app.addRoute("/", proc(ctx: Context) {.async.} =
+app.addRoute("/", proc(ctx: Context) {.async, gcsafe.} =
     resp htmlResponse(templates.renderTemplate("index.html"))
 )
 
-app.addRoute("/about", proc(ctx: Context) {.async.} =
+app.addRoute("/about", proc(ctx: Context) {.async, gcsafe.} =
     resp htmlResponse(templates.renderTemplate("about.html"))
 )
 
-app.addRoute("/stats", proc(ctx: Context) {.async.} =
+app.addRoute("/stats", proc(ctx: Context) {.async, gcsafe.} =
     var data = %* {
         "title": "some variables from nim", 
         "foo": "Foo!", "bar": "Bar!"
