@@ -44,12 +44,16 @@ Some examples might have different port number for sake of demostration.
 - basic auth: [basic_auth](basic_auth)
 
 ## Cookies
-- cookies basic example: [cookies_basic](cookies_basic)
+- basic cookies example: [basic_cookies](basic_cookies)
 
 ## Database
-- CRUD basic example: [crud](crud)
+- Basic CRUD example with sqlite: [basic_crud](basic_crud)
 
 ## Sample Apps
 - Hello world: [helloworld](helloworld)
 - Blog app: [blog](blog)
 - ToDo app: [todoapp](todoapp)
+
+## TODO
+- `cors` example is not finished
+- `basic_crud` has TODOs
