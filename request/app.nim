@@ -20,5 +20,12 @@ app.addRoute("/patch", echoMethod, HttpPatch)
 app.addRoute("/delete", echoMethod, HttpDelete)
 app.addRoute("/any", echoMethod, @[HttpGet, HttpPost, HttpPut, HttpPatch, HttpDelete])
 
+# alternative way
+app.get("/alt-get", echoMethod)
+app.post("/alt-post", echoMethod)
+app.put("/alt-put", echoMethod)
+app.patch("/alt-patch", echoMethod)
+app.delete("/alt-delete", echoMethod)
+
 # Run instance
 app.run()
