@@ -72,7 +72,6 @@ app.get("/delete/{id}", proc(ctx: Context) {.async.} =
         id = ctx.getPathParams("id")
         db= open("sqlite.db", "", "", "")
 
-    echo id
     db.exec(sql"DELETE FROM todo WHERE id = ?", id)
     db.close()
     resp redirect("/")
