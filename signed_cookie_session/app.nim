@@ -8,7 +8,7 @@ let
     settings = newSettings(secretKey = secretKey)
 
 # Create app instance with session middleware
-var app = newApp(settings = settings, middlewares = @[sessionMiddleware(secretKey = secretKey.SecretKey, path = "/")])
+var app = newApp(settings = settings, middlewares = @[sessionMiddleware(settings = settings, path = "/")])
 
 # Create routes
 # set session values
