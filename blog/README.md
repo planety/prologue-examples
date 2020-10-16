@@ -6,13 +6,7 @@ The purpose of this 'Blog' example is to cover following basic actions:
 - List multiple records.
 - Edit or delete particular record
 - Create new record.
-
-## Screenshot
-![screenshot](screenshot/screenshot.jpg)
-
-## Compile and run project
-Simply call `nim compile --run app.nim` in blog root directory and access 127.0.0.1:8787 URL in your browser.
-
+ 
 ## Project structure
 The structure is straightforward:
 ```
@@ -28,10 +22,14 @@ urls.nim
 views.nim
 ```
 
-####  Static folder
+## Screenshot
+
+![screenshot](screenshot/screenshot.jpg)
+
+###  Static folder
 Every public assets are stored in this folder.
 
-#### Templates folder
+### Templates folder
 This folder is for storing templates written with Karax DSL (domain specific language) which is kind of similar to the popular Pug template engine approach. 
 Each template file consists of two procs inside:
 - proc ended with `Page` name - it acts as a final template (e.g. `indexPage` or `loginPage` and etc). It's a common top level structure of our template and generally it's the same across all pages.
@@ -39,26 +37,29 @@ Each template file consists of two procs inside:
  
 There are also commonly used blocks (or `chunks`/`partials` - whatever you call them) that are stored in `share` subfolder and we call them inside our templates to reduce duplication in our code.
  
-#### .env file
+### .env file
 Env file holds values necessary to run an application.
  
-#### app.nim file
+### app.nim file
 Our starting point is where we create the Prologue app.
  
-#### blog.db
+### blog.db
 A SQLite database file that will be created automatically when the application runs.
  
-#### consts.nim
+### consts.nim
 A small file to store constants like database and schema files (yes we could use an .env file for that so existence of this file is questionable).
  
-#### initdb.nim and schema.sql
+### initdb.nim and schema.sql
 A small proc for automatically creating a sqlite db file using schema.sql file if `blog.db` file is absent.
  
-#### urls.nim
+### urls.nim
 This file is for grouping URL endpoints and linking them to their corresponding procs from `views.nim`.
  
-#### views.nim
+### views.nim
 This file contains business logic that is called from 'attached' urls. It's like a 'controller' or a 'route'
+
+## Compile and run project
+Simply call `nim compile --run app.nim` and access 127.0.0.1:8080 URL in your browser.
 
 ## Miscellaneous
 This example uses Marx classless framework with custom modifications made by @keshon

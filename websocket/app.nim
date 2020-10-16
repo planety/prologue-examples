@@ -1,6 +1,4 @@
 import prologue
-import prologue/middlewares/staticfile
-
 import ./urls
 
 let
@@ -13,7 +11,6 @@ let
 
 
 var app = newApp(settings = settings)
-
-app.use(staticFileMiddleware(env.get("staticDir")))
-app.addRoute(urls.urlPatterns, "/")
+# Be careful with the routes.
+app.addRoute(urls.urlPatterns, "")
 app.run()

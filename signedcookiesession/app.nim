@@ -1,7 +1,8 @@
 import prologue
-import prologue/middlewares/staticfile
-
+import prologue/middlewares/utils
+import prologue/middlewares/signedcookiesession
 import ./urls
+
 
 let
   env = loadPrologueEnv(".env")
@@ -13,7 +14,6 @@ let
 
 
 var app = newApp(settings = settings)
-
-app.use(staticFileMiddleware(env.get("staticDir")))
-app.addRoute(urls.urlPatterns, "/")
+app.use(@[debugRequestMiddleware(), sessionMiddleware(settings)])
+app.addRoute(urls.urlPatterns, "")
 app.run()

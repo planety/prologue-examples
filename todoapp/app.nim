@@ -1,15 +1,17 @@
 import prologue
+import prologue/middlewares/staticfile
 
 
 proc home(ctx: Context) {.async.} =
   resp readFile("templates/todoapp.html")
 
 
-proc staticFileMiddleware*(path: string): HandlerAsync =
-  result = proc(ctx: Context) {.async.} =
-    await switch(ctx)
+let 
+  settings = newSettings(port = Port(8080))
 
-let settings = newSettings(staticDirs = @["templates"], port = Port(8787))
-var app = newApp(settings)
-app.addRoute("/", home)
+var
+  app = newApp(settings)
+
+app.use(staticFileMiddleware("templates"))
+app.addRoute("/home", home)
 app.run()
