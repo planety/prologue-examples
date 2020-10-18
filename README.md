@@ -4,10 +4,10 @@ A repository to host examples for [Prologue](https://github.com/planety/prologue
 ⚠️ These examples are under development and may change in the future.
 
 ## Prerequisites
-- Installed [Nim](https://nim-lang.org/) compiler (v1.26 or above)
-- Installed [Prologue](https://github.com/planety/prologue)
+- Installed [Nim](https://nim-lang.org/) compiler (v1.4.0 or above)
+- Installed [Prologue](https://github.com/planety/prologue) framework (v.0.4.0 or above)
 
-You can install Prologue via Nimble: `nimble install prologue`
+You can install Prologue via Nimble: `nimble install prologue` (or `nimble install `nimble install prologue@#head` if you want to get the latest version).
 
 ## Compile and run examples
 Simply call `nim compile --run example.nim` inside of particular example directory and access 127.0.0.1:8080 URL in your browser.
@@ -20,6 +20,7 @@ Some examples might have different port number for sake of demostration.
 - basic conf: [basic_conf](basic_conf)
 - static dir: [http_static_server](http_static_server)
 - django-like structure: [basic](basic)
+- websocket: [websocket](websocket)
 
 ## Requests
 - route basic example: [route_basic](route_basic)
@@ -44,6 +45,8 @@ Some examples might have different port number for sake of demostration.
 - CSRF: [csrf](csrf)
 - CORS: [cors](cors)
 - session with signed cookie: [signed_cookie_session](signed_cookie_session)
+- memory session: [memory_session](memory_session)
+- redis session: [redis_session](redis_session)
 - basic auth: [basic_auth](basic_auth)
 
 ## Cookies
@@ -60,4 +63,3 @@ Some examples might have different port number for sake of demostration.
 ## TODO
 - `cors` example is not finished
 - `basic_crud` has TODOs
-- add to Readme: `memory_session`, `redis_session`, `websocket`
