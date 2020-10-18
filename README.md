@@ -17,10 +17,13 @@ Some examples might have different port number for sake of demostration.
 - default settings: [http_server](http_server)
 - custom settings: [http_server_custom_settings](http_server_custom_settings)
 - .env settings: [http_server_dotenv](http_server_dotenv)
+- basic conf: [basic_conf](basic_conf)
 - static dir: [http_static_server](http_static_server)
+- django-like structure: [basic](basic)
 
 ## Requests
 - route basic example: [route_basic](route_basic)
+- basic structures: [basic_structure](basic_structure)
 - anonymous handlers: [anon_handler](anon_handler)
 - request methods: [request](request)
 - URL parameters: [url_param](url_param)
@@ -57,3 +60,4 @@ Some examples might have different port number for sake of demostration.
 ## TODO
 - `cors` example is not finished
 - `basic_crud` has TODOs
+- add to Readme: `memory_session`, `redis_session`, `websocket`
