@@ -32,6 +32,8 @@ Some examples might have different port number for sake of demostration.
 - URL with Regex: [regex_url](regex_url)
 - routes with DSL: [dsl_routes](dsl_routes)
 - group routes: [group_routes](group_routes)
+- nesting routes: [nesting](nesting)
+- nesting routes with `with` macro: [nesting_width](nesting_width)
 
 ## Responses
 - response basic example: [response](response)
