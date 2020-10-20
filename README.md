@@ -7,7 +7,7 @@ A repository to host examples for [Prologue](https://github.com/planety/prologue
 - Installed [Nim](https://nim-lang.org/) compiler (v1.4.0 or above)
 - Installed [Prologue](https://github.com/planety/prologue) framework (v.0.4.0 or above)
 
-You can install Prologue via Nimble: `nimble install prologue` (or `nimble install `nimble install prologue@#head` if you want to get the latest version).
+You can install Prologue via Nimble: `nimble install prologue` (or `nimble install prologue@#head` if you want to get the latest version).
 
 ## Compile and run examples
 Simply call `nim compile --run example.nim` inside of particular example directory and access 127.0.0.1:8080 URL in your browser.
