@@ -89,9 +89,8 @@ app.get("/delete/{id}", proc(ctx: Context) {.async.} =
         id = ctx.getPathParams("id")
         dbConn = open("sqlite.db", "", "", "")
 
-    discard newTodo():
-        dbConn.select(""""Todo.id = $1""", parseInt(@"id"))
-        dbConn.delete
+   
+    dbConn.delete(@id)
    
     resp redirect("/")
 )
