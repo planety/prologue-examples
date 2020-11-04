@@ -1,3 +1,4 @@
+import ../allographer_crud/app as a35
 import ../anon_handler/app as a0
 import ../basic/app as a26
 import ../basic_auth/app as a1
@@ -32,3 +33,4 @@ import ../url_query/app as a25
 import ../websocket/app as a32
 import ../nesting/app as a33
 import ../nesting_with/app as a34
+

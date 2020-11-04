@@ -1,5 +1,8 @@
 nimcache/
 nimblecache/
 htmldocs/
+allographer_crud/log/
+allographer_crud/db.sqlite3
 *.bat
 *.exe
+*.log

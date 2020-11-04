@@ -55,7 +55,8 @@ Some examples might have different port number for sake of demostration.
 - basic cookies example: [basic_cookies](basic_cookies)
 
 ## Database
-- Basic CRUD example with sqlite: [basic_crud](basic_crud)
+- Basic CRUD example with native sqlite: [basic_crud](basic_crud)
+- CRUD with `allographer` lib: [allographer_crud](allographer_crud)
 
 ## Sample Apps
 - Hello world: [helloworld](helloworld)
@@ -63,5 +64,8 @@ Some examples might have different port number for sake of demostration.
 - ToDo app: [todoapp](todoapp)
 
 ## TODO
-- `cors` example is not finished
-- `basic_crud` has TODOs
+- `cors` is WIP
+- `norm_crud` is WIP
+
+## Authors
+Innokentiy Sokolov, Zeshen Xing, Xie Yanbo
