@@ -1,4 +1,4 @@
 # Allographer ORM example with Prologue
 
-##Dependencies
+## Dependencies
 ```nimble install allographer```
