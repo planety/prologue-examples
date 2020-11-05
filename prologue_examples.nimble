@@ -10,7 +10,7 @@ srcDir        = "src"
 # Dependencies
 requires "prologue >= 0.4.0"
 requires "nwt >= 0.1.7"
-requires "allographer"
+requires "allographer >= 0.13.4"
 
 task texamples, "Test examples":
   exec "nim c -d:release .tests/compile_all.nim"
