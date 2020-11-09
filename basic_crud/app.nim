@@ -1,25 +1,24 @@
-import strformat, strutils, db_sqlite 
 from sqlite3 import last_insert_rowid
+import 
+    strutils, 
+    db_sqlite, 
+    prologue,
+    views
 
-import prologue
-import views
-
-
-# Create default settings
-let settings = newSettings()
 
 # Create instance
-var app = newApp(settings = settings)
+var app = newApp()
 
 # Create routes
-# List all
+# - list all
 app.addRoute("/", proc(ctx: Context) {.async.} =
     let db = open("sqlite.db", "", "", "")
     let rows = db.getAllRows(sql("""SELECT * FROM todo"""))
     db.close()
     resp htmlResponse(listView(rows=rows))
 )
-# Create
+
+# - create
 app.get("/create", proc(ctx: Context) {.async.} =
     if ctx.getQueryParams("save").len != 0:
         let
@@ -33,7 +32,8 @@ app.get("/create", proc(ctx: Context) {.async.} =
     else:
         resp htmlResponse(createView(ctx.getQueryParams("status"), ctx.getQueryParams("id")))
 )
-# Read
+
+# - read
 app.get("/read/{item}", proc(ctx: Context) {.async.} =
     let
         db = open("sqlite.db", "", "", "")
@@ -45,7 +45,8 @@ app.get("/read/{item}", proc(ctx: Context) {.async.} =
     else:
             resp htmlResponse(readView($rows[0]))
 )
-# Update
+
+# - update
 app.get("/update/{id}", proc(ctx: Context) {.async.} =
     if ctx.getQueryParams("save").len != 0:
         let
@@ -67,6 +68,7 @@ app.get("/update/{id}", proc(ctx: Context) {.async.} =
         resp htmlResponse(updateView(id.parseInt, data[0], ctx.getQueryParams("status")))
 )
 
+# - delete
 app.get("/delete/{id}", proc(ctx: Context) {.async.} =
     let
         id = ctx.getPathParams("id")

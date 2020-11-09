@@ -6,3 +6,4 @@ allographer_crud/*.sqlite3
 *.bat
 *.exe
 *.log
+blog/*.db

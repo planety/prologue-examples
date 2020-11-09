@@ -1,4 +1,4 @@
-#import ../allographer_crud/app as a35
+import ../allographer_crud/app as a35
 import ../anon_handler/app as a0
 import ../basic/app as a26
 import ../basic_auth/app as a1

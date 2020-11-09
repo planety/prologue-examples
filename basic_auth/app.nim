@@ -13,11 +13,8 @@ proc home(ctx: Context) {.async.} =
     resp "You logged in."
 
 
-# Create default settings
-let settings = newSettings()
-
 # Create instance
-var app = newApp(settings)
+var app = newApp()
 
 # Create route
 app.addRoute("/", home, middlewares = @[basicAuthMiddleware(realm = "home", verify)])

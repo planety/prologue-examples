@@ -7,11 +7,8 @@ proc echoMethod(ctx: Context) {.async.} =
     resp "Hey! The selected method is : " & $ctx.request.reqMethod
 
 
-# Create new (default) settings
-let settings = newSettings()
-
 # Create instance
-var app = newApp(settings = settings)
+var app = newApp()
 
 # Create routes with DSL
 # You can read more about it: https://nim-lang.github.io/Nim/with.html

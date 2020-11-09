@@ -1,9 +1,11 @@
-import prologue
-import prologue/middlewares/signedcookiesession
-import prologue/middlewares/staticfile
+import 
+  prologue,
+  prologue/middlewares/signedcookiesession,
+  prologue/middlewares/staticfile
 
-import urls
-import initdb
+import 
+  urls,
+  initdb
 
 
 initDb()

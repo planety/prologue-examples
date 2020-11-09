@@ -7,11 +7,8 @@ proc handler(ctx: Context) {.async.} =
   resp "Cookie has been set"
 
 
-# Create default settings
-let settings = newSettings()
-
 # Create instance
-var app = newApp(settings = settings)
+var app = newApp()
 
 # Create route
 app.addRoute("/", handler)
