@@ -4,10 +4,7 @@ import prologue/middlewares/auth
 
 # Route handlers
 proc verify(ctx: Context, username, password: string): bool =
-    if username == "admin" and password == "password":
-        result = true
-    else:
-        result = false
+    username == "admin" and password == "password"
 
 proc home(ctx: Context) {.async.} =
     resp "You logged in."
