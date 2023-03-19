@@ -1,4 +1,4 @@
-# Hello Worl example
+# Hello World example
 Compile Release:
 `nim c -r --d:release --threads:on example.nim` 
 
